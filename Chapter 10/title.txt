@@ -1,0 +1,7 @@
+Chapter 10: More on Variables and Data Types
+
+Global variable and extern variable.
+Static variable
+Enumerated data types
+The typedef statement
+Bitwise operators
