@@ -1,0 +1,4 @@
+Chapter 8: Inheritance
+
+Class, subclass and superclass == class child class, parent class
+Note that the instance variables that are to be accessed directly by a subclass must be declared in the interface section, and not in the implementation section as we have been doing throughout this book.
