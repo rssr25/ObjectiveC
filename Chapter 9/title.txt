@@ -1,0 +1,6 @@
+Chapter 9: Polymorphism, Dynamic Typing and Dynamic Binding
+Polymorphism enables programs to be developed so that objects from different classes can define methods that share the same name. Dynamic typing defers the determination of the class that an object belongs to until the program is executing. Dynamic binding defers the determination of the actual method to invoke on an object until program execution time.
+
+DYNAMIC BINDING AND THE id TYPE:
+
+id can be used for storing objects that belong to any class. The real power of this data type is exploited when it’s used this way to store different types of objects in a variable during the execution of a program
