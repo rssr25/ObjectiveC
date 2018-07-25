@@ -1,0 +1,30 @@
+Chapter 11: Categories and Protocols.
+
+In this chapter, you learn how to add methods to a class in a modular fashion through the use of categories and how to create a standardised list of methods for others to implement.
+
+Okay so if you want to have new methods to the class definition, the straightforward way is to make it the parent of a subclass and then use it. But there is a much better way to do that, which is called CATEGORIES.
+
+A category provides an easy way for you to modularise the definition of a class into groups or categories of related methods. 
+
+It also gives you an easy way to extend an existing class definition without even having access to the original source code for the class and without having to create a subclass. This is a powerful yet easy concept for you to learn.
+
+A special case allows creating a category without a name; that is, no name is specified between the ( and ). This special syntax defines what is known as a class extension. When you define an unnamed category like this, you can extend the class by adding additional instance variables and properties.
+
+This is not allowed for named categories. Methods declared in a class extension are implemented in the main implementation section for the class and not in a separate imple- mentation section.
+
+A category can override another method in the class, but this is considered poor programming practice. For one thing, after you override a method, you can no longer access the original method. Therefore, you must be careful to duplicate all the functionality of the overridden method in your replacement. If you do need to override a method, subclassing might be the right choice. 
+
+PROTOCOLS AND DELEGATION:
+
+A protocol is a list of methods that is shared among classes. The methods listed in the protocol do not have corresponding implementations; they’re meant to be implemented by someone else (like you). A protocol provides a way to define a set of methods that are somehow related with a specified name. The methods are typically documented so that you know how they are to perform and so that you can implement them in your own class definitions, if desired.
+
+A protocol lists a set of methods, some of which you can optionally implement, and others that you are required to implement. If you decide to implement all of the required methods for a particular protocol, you are said to conform to or adopt that protocol. You are allowed to define a protocol where all methods are optional, or one where all are required.
+
+@interface AddressBook: NSObject <NSCopying>
+This says that AddressBook is an object whose parent is NSObject and states that it conforms to the NSCopying protocol. Because the system already knows about the methods previously defined for the protocol (in this example, it knows from the header file NSObject.h), you don’t need to declare the methods in the interface section. However, you need to define them in your implementation section.
+
+You can also think of a protocol as an interface definition between two classes. The class that defines the protocol can be thought of as delegating the work defined by the methods in the protocol to the class that implements them.
+
+You might come across the notion of an informal protocol in your readings. This is really a category that lists a group of methods but does not implement them. Everyone (or just about everyone) inherits from the same root object, so informal categories are often defined for the root class. Sometimes informal protocols are also referred to as abstract protocols.
+
+You’ve learned several ways to extend the definition of a class through techniques such as subclassing and using categories. Another technique involves defining a class that consists of one or more objects from other classes. An object from this new class is known as a composite object because it is composed of other objects.
